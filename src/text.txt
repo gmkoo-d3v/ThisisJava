@@ -1,0 +1,97 @@
+클래스 == 설계도 == 데이터 타입 (작은 타입 여러개)
+
+조건: 정보(속성)(고유+상태) + 기능
+class Apt { //데이터타입이니까 
+	이름
+	층수
+	평형
+	(이게 도메인)
+	화장실
+}
+
+class 화장실 {
+	변기
+	수건
+	
+}
+
+class Hello {
+	public static void main(String[] args){
+		int data = 0;
+		Car c = new Car(); //car c라는 이름의 박스 스택에 생성 또한 DATA란이름 박스도 생성
+		c.move(); // 호출함으로 힙에 형태만있던 move 함수를 불러 main함수 스택영역에 move 공간을 추가 할당해 스피드라는 박스를만들어 0을 할당하게된다 
+		//스테틱자원은 일단 메모리에 있으니 접근 가능하다 또한 class. 방식으로 접근. 스테틱은 메모리를 게속 고정시킨다. 스택에 있는 함수(변수)는 들락날락한다.
+	}
+}
+
+class Car {
+	int window = 4;
+	
+	public void move(){
+		int speed = 0;
+	}
+}
+
+
+
+-----------------------------------------------
+class Car {
+	public void run(){
+		int data = 100;
+		}
+		public void stop (){
+			int data=200;
+		}
+}
+
+둘다 다른 함수의 지역변수이기에 각 data는 괜찮다.
+-------------------------------------------------
+
+
+/* 
+블럭주석
+클래스 == 설계도 == 데이터 타입 (작은 여러개를 가지는 큰 타입)
+
+클래스 변수명;
+클래스의 종류
+1. class Car{} >main 함수를 가지고 있지 않은 클래스 > 독자적인 실행 불가능 > 다른 클래스를 도움을 주는 클래스 (lib)
+2. class Car { public static void main() {}} > main 함수를 가지는 클래스 > 독자적인 실행이 가능하다.
+
+3. 현재 main 함수를 가지는 클래스 .. 결과를 확인
+3.1 class Car{} > Car car = new Car(); car.move()
+3.2 Ex02_Variable ex02 = new Ex02_Variable()
+3.3 그런데 ..... new 없이도 memory 올릴수 있는 방법이 있다면 >> static
+3.4 당신이 필요한 변수나 함수가 memory에 있다면 static 변수, static 함수 를 쓸수 있지 않을까
+3.4 Ex02_Variable new 하지 않고 ... static 함수 main 이름 (진입점) 약속
+
+Tip)
+C#) class Car { public static void Main(){}} // main Main 차이점정도로 유사하다
+
+
+변수: variable 
+데이터(자료)를 담을 수 있는 공간(memory)의 이름
+
+공간(크기) > 데이터 타입(자료형) >> 메모리의 공간의 한정(크기) >> 최소한의 공간에 최대의 데이터표현 (자바의 기본은 int이기에 4바이트에 넣어서 사용한다. 사용자가 바이트로 정의를한다고 할지라도)
+int age = 150; 데이터 공간남는것에 걱정하지말고 써라
+
+변수가 선언되는 위치가 중요하다 (scope 유효범위)
+1. instance variable : 객체변수 (클래스 안에 선언) >> class Car { public int door } //멤버변수
+2. local variable    : 지역변수(함수 안에)       >> class Car { public void run(parameter) {int data=0;//종결자 } }
+3. static variable   : 공유자원(객체간) 정적변수   >> class Car { public static int NUM; } 
+4. 함수안에 있는 제어블럭 안에 있는 변수 blcok variable (if , for) 가장 작은 scope을 가진다.  class Car { void run { for (int i = 0; i.....} }
+			for문이 생성되고 사라지면 같이 사라지게된다.
+			
+ static > instatnce > local > block 순이 크기 순이다.			
+
+
+
+
+1`4장
+5장보다 6장먼저
+6->5장순서
+7장 8장
+9장  10장 12장 14장 19 20 스킵
+11장 13장 15장 16장 17장 18장
+스터디 6 7 8 18장 중점
+
+*/.
