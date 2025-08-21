@@ -1,0 +1,71 @@
+설계도가 설계도를 가질수 있다.
+자동차 객체 - 부품 [차체 엔진 타이어 ]
+
+Body body; 
+Engine engine;
+Tire tire;
+
+Body Engine Tire 타입들은 각 클래스로 만든 각기 주소가 들어간다 body engine tire 참조타입
+
+자동차 객체 - 고유데이터 [제작회사 모델 색깔 최고속도]
+
+String compnay;
+String model;
+String color;
+int maxSpeed;
+
+자동차 객체 - 상태 [ 현재속도 엔진회전수]
+
+int speed;
+int rpm;
+
+각 코드줄은 public class Car { 안에들어감 }
+
+public class Car { 
+
+	String compnay;
+	String model;
+	String color;
+	int maxSpeed;
+	
+	int speed;
+	int rpm;
+	
+	Body body; 
+	Engine engine;
+	Tire tire;
+
+}
+
+*** 리터럴은 사용자가 입력하는 문자를 리터럴 이라 칭한다 ****
+
+
+필드 = 정보
+
+생성자 = 빠져도된다
+
+메소드 = 기능 동작을 나타내는 함수 (엄밀히 따지면 함수가 큰개념이고 메소드가 안에 소속된다)
+
+------------------------------------------------------------------------------
+for문은 반복횟수가 명확하다
+while 조건이 불명확하다
+do while do는 한번 무조건간다(메뉴선택같이) 그다음에 반복 while  메뉴 선택사항에 사용
+
+break 중단하고 나가라
+
+
+continue 아래구문 스킵해라
+
+
+
+java.lang 은 무조건열림
+java class math
+
+public final class Math 오픈된 상속할수없는 마지막 클래스야
+Math도 클래스이기에 메모ㅇ리에 올려야한다.
+public static double random() 
+
+*********************************************************************************
+함수앞에 static이 붙어 있으면 객체생성하기전에 메모리에 올라가기에 new 없이도 사용가능
+*********************************************************************************
+ctrl shift o 누르면 다른사람 클래스 다등록함

@@ -19,12 +19,13 @@ public class Ex02_Variable {
 		int age = 50;
 		System.out.println(age);
 	
-		 // 선언 (지역변수)
-	//	System.out.println(emp); // 초기화 안되었길래 출력안됨
+		// 선언 (지역변수)
+		//	System.out.println(emp); // 초기화 안되었길래 출력안됨
 		// 초기화란 메모리에 올리는것 고로
 	
-//		Emp emp;
-//		emp = new Emp(); //주소값이 할당 (초기화)
+		//		Emp emp; // 선언 (지역변수)
+		//                초기화함수(생성자)
+		//		emp = new Emp(); //주소값이 할당 (초기화)
 		
 		Emp emp = new Emp();
 		Emp emp3 = new Emp();
@@ -45,5 +46,20 @@ public class Ex02_Variable {
 	  emp2.empno = 5000; // 힙영역 emp empno값을 5000으로 변경한다 고로 emp.empno 도 5000됨
 	  System.out.println(emp.empno); // 주소값 할당
 	  
+	  System.out.println(emp2 == emp); // 트루라면 같은장소에 있구나
+	  
+	  int a; //스텍메모리에 4바이트 할당하고 a라는 이름 할당하겠다
+	  int a , b , c; // 같은 타입의 변수를 나열 이방식은 권장하지 않는다. >> 개발자성향상 배열로 만든다. 배열 int[] arr
+	  // a = 100; b = 200; c = 300; 권장안함 배열쓰자
+
+	  // int a = 500; 같은지역에 a가 두번선언되니 Duplicate locale variable 라는 에러가 뜬다.
+	  
+	  int result = a+b; //result 초기화 a+b들어간겂으로
+	  System.out.println("result 값은 :" + result );
+	  
+	  int k = 100;
+	  int y = k;
+	  y = 200;
+	  // k는 100이란값가짐. y에 100이란값을 넣음 y에 200값을 다시 덮어쓰기함 고로 y 호출하면 200나옴
 	}
 }
